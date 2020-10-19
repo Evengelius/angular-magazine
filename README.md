@@ -4,7 +4,7 @@
 
 # Angular | Magazine
 
-This is a fast-food application.
+This is a magazine application.
 
 
 ## Getting Started
