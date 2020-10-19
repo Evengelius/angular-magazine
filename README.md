@@ -30,14 +30,14 @@ Angular takes care of everything on the client side.
 **HttpClient**<br />
 Processing HTTP requests made with SpringBoot.
 
-**Authentication and validation management**<br />
+**Authentication and Validation management**<br />
 Angular Interceptor & JSON Web Token | Angular Validation.
 
 **Animation management**<br />
-Angular Animations | Fade in / out transition made on each page change.
+Angular Animation : animations made on each page change.
   
 **Authorization management**<br />
-Angular Route Guards.
+Angular Route Guards : canActivate & canDeactivate.
 
 
 ## Screenshots | Demo
