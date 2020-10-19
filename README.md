@@ -42,6 +42,11 @@ Angular Route Guards.
 
 ## Screenshots | Demo
 
+**Application**
+
+![Application | 01](https://zupimages.net/up/20/43/rxqr.png)
+![Application | 02](https://zupimages.net/up/20/43/zhpa.png)
+
 **Authentication | Login**
 
 ![Authentication | Login](https://zupimages.net/up/20/43/tt9n.png)
