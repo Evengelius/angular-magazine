@@ -13,8 +13,8 @@ Angular takes care of everything on the client side.
 
 <ins>Before going further, please make sure you are processing the repositories in order as follow</ins> : 
 
-* [Spring](https://github.com/Evengelius/spring_fastfood)<br />
-* [Angular](https://github.com/Evengelius/angular_fastfood)<br />
+* [Spring](https://github.com/Evengelius/spring_magazine)<br />
+* [Angular](https://github.com/Evengelius/angular-magazine)<br />
 
 ### Installing
 
