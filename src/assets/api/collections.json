@@ -1,0 +1,200 @@
+[
+  {
+    "id": 1,
+    "name": "politic",
+    "articles": [
+      {
+        "id": 1,
+        "title": "Title 01",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis odio iaculis, vulputate enim in, tincidunt lorem. Maecenas pharetra sagittis felis id placerat. Nulla diam neque, facilisis vitae tempus ut, viverra nec erat. Duis nec blandit lacus. Pellentesque mollis magna eget turpis porta, vitae placerat ligula pretium. Nam id ultricies tortor, nec lacinia lacus. Mauris et enim non libero feugiat accumsan. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet cursus ante, vel rutrum augue. Sed ac dapibus eros.",
+        "author": "Kobe Bryant",
+        "images": [
+          {
+            "id": 1,
+            "name": "politic-01.png"
+          },
+          {
+            "id": 2,
+            "name": "politic-01.png"
+          },
+          {
+            "id": 3,
+            "name": "politic-01.png"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Title 02",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis odio iaculis, vulputate enim in, tincidunt lorem. Maecenas pharetra sagittis felis id placerat. Nulla diam neque, facilisis vitae tempus ut, viverra nec erat. Duis nec blandit lacus. Pellentesque mollis magna eget turpis porta, vitae placerat ligula pretium. Nam id ultricies tortor, nec lacinia lacus. Mauris et enim non libero feugiat accumsan. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet cursus ante, vel rutrum augue. Sed ac dapibus eros.",
+        "author": "Kobe Bryant",
+        "images": [
+          {
+            "id": 1,
+            "name": "politic-02.png"
+          },
+          {
+            "id": 2,
+            "name": "politic-02.png"
+          },
+          {
+            "id": 3,
+            "name": "politic-02.png"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Title 03",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis odio iaculis, vulputate enim in, tincidunt lorem. Maecenas pharetra sagittis felis id placerat. Nulla diam neque, facilisis vitae tempus ut, viverra nec erat. Duis nec blandit lacus. Pellentesque mollis magna eget turpis porta, vitae placerat ligula pretium. Nam id ultricies tortor, nec lacinia lacus. Mauris et enim non libero feugiat accumsan. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet cursus ante, vel rutrum augue. Sed ac dapibus eros.",
+        "author": "Kobe Bryant",
+        "images": [
+          {
+            "id": 1,
+            "name": "politic-03.png"
+          },
+          {
+            "id": 2,
+            "name": "politic-03.png"
+          },
+          {
+            "id": 2,
+            "name": "politic-03.png"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "Title 04",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis odio iaculis, vulputate enim in, tincidunt lorem. Maecenas pharetra sagittis felis id placerat. Nulla diam neque, facilisis vitae tempus ut, viverra nec erat. Duis nec blandit lacus. Pellentesque mollis magna eget turpis porta, vitae placerat ligula pretium. Nam id ultricies tortor, nec lacinia lacus. Mauris et enim non libero feugiat accumsan. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet cursus ante, vel rutrum augue. Sed ac dapibus eros.",
+        "author": "Kobe Bryant",
+        "images": [
+          {
+            "id": 1,
+            "name": "politic-04.png"
+          },
+          {
+            "id": 2,
+            "name": "politic-04.png"
+          },
+          {
+            "id": 3,
+            "name": "politic-04.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "sport",
+    "articles": [
+      {
+        "id": 5,
+        "title": "Title 05",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis odio iaculis, vulputate enim in, tincidunt lorem. Maecenas pharetra sagittis felis id placerat. Nulla diam neque, facilisis vitae tempus ut, viverra nec erat. Duis nec blandit lacus. Pellentesque mollis magna eget turpis porta, vitae placerat ligula pretium. Nam id ultricies tortor, nec lacinia lacus. Mauris et enim non libero feugiat accumsan. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet cursus ante, vel rutrum augue. Sed ac dapibus eros.",
+        "author": "Lebron James",
+        "images": [
+          {
+            "id": 1,
+            "name": "sport-01.png"
+          },
+          {
+            "id": 2,
+            "name": "sport-01.png"
+          },
+          {
+            "id": 3,
+            "name": "sport-01.png"
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "title": "Title 06",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis odio iaculis, vulputate enim in, tincidunt lorem. Maecenas pharetra sagittis felis id placerat. Nulla diam neque, facilisis vitae tempus ut, viverra nec erat. Duis nec blandit lacus. Pellentesque mollis magna eget turpis porta, vitae placerat ligula pretium. Nam id ultricies tortor, nec lacinia lacus. Mauris et enim non libero feugiat accumsan. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet cursus ante, vel rutrum augue. Sed ac dapibus eros.",
+        "author": "Lebron James",
+        "images": [
+          {
+            "id": 1,
+            "name": "sport-02.png"
+          },
+          {
+            "id": 2,
+            "name": "sport-02.png"
+          },
+          {
+            "id": 3,
+            "name": "sport-02.png"
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "title": "Title 07",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis odio iaculis, vulputate enim in, tincidunt lorem. Maecenas pharetra sagittis felis id placerat. Nulla diam neque, facilisis vitae tempus ut, viverra nec erat. Duis nec blandit lacus. Pellentesque mollis magna eget turpis porta, vitae placerat ligula pretium. Nam id ultricies tortor, nec lacinia lacus. Mauris et enim non libero feugiat accumsan. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet cursus ante, vel rutrum augue. Sed ac dapibus eros.",
+        "author": "Lebron James",
+        "images": [
+          {
+            "id": 1,
+            "name": "sport-03.png"
+          },
+          {
+            "id": 2,
+            "name": "sport-03.png"
+          },
+          {
+            "id": 3,
+            "name": "sport-03.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "health",
+    "articles": [
+      {
+        "id": 8,
+        "title": "Title 08",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis odio iaculis, vulputate enim in, tincidunt lorem. Maecenas pharetra sagittis felis id placerat. Nulla diam neque, facilisis vitae tempus ut, viverra nec erat. Duis nec blandit lacus. Pellentesque mollis magna eget turpis porta, vitae placerat ligula pretium. Nam id ultricies tortor, nec lacinia lacus. Mauris et enim non libero feugiat accumsan. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet cursus ante, vel rutrum augue. Sed ac dapibus eros.",
+        "author": "Stephen Curry",
+        "images": [
+          {
+            "id": 1,
+            "name": "health-01.png"
+          },
+          {
+            "id": 2,
+            "name": "health-01.png"
+          },
+          {
+            "id": 3,
+            "name": "health-01.png"
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "title": "Title 09",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis odio iaculis, vulputate enim in, tincidunt lorem. Maecenas pharetra sagittis felis id placerat. Nulla diam neque, facilisis vitae tempus ut, viverra nec erat. Duis nec blandit lacus. Pellentesque mollis magna eget turpis porta, vitae placerat ligula pretium. Nam id ultricies tortor, nec lacinia lacus. Mauris et enim non libero feugiat accumsan. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet cursus ante, vel rutrum augue. Sed ac dapibus eros.",
+        "author": "Stephen Curry",
+        "images": [
+          {
+            "id": 1,
+            "name": "health-02.png"
+          },
+          {
+            "id": 2,
+            "name": "health-02.png"
+          },
+          {
+            "id": 3,
+            "name": "health-02.png"
+          }
+        ]
+      }
+    ]
+  }
+]

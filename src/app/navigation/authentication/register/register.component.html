@@ -1,0 +1,105 @@
+<app-header></app-header>
+<div class="container">
+  <!-- Material form register -->
+  <mdb-card>
+    <mdb-card-header class="blue-gradient white-text text-center py-4">
+      <h5>
+        <strong>Sign up</strong>
+      </h5>
+    </mdb-card-header>
+    <br />
+    <!--Card content-->
+    <mdb-card-body class="px-lg-5 pt-0">
+
+      <!-- Form -->
+      <form (ngSubmit)="submit()" [formGroup]="registerForm" class="text-center" style="color: #757575;">
+
+        <div class="form-row">
+          <div class="col">
+            <!-- Name -->
+            <div class="md-form">
+              <input [ngClass]="{ 'is-invalid': submitted && registerForm.controls.name.errors }"
+                     class="form-control" formControlName="name" id="name" type="text" mdbInput>
+              <label for="name">Name</label>
+              <!-- Validation -->
+              <small *ngIf="submitted && registerForm.controls.name.errors" class="form-text text-muted mb-4">
+                <span *ngIf="registerForm.controls.name.errors.required">Name is required</span>
+                <span *ngIf="registerForm.controls.name.errors.maxlength">Sorry you cannot exceed 20 characters</span>
+              </small>
+            </div>
+          </div>
+          <div class="col">
+            <!-- Firstname -->
+            <div class="md-form">
+              <input [ngClass]="{ 'is-invalid': submitted && registerForm.controls.name.errors }"
+                     class="form-control" formControlName="firstname" id="firstname" type="text" mdbInput>
+              <label for="firstname">Firstname</label>
+              <!-- Validation -->
+              <small *ngIf="submitted && registerForm.controls.firstname.errors" class="form-text text-muted mb-4">
+                <span *ngIf="registerForm.controls.firstname.errors.required">Firstname is required</span>
+                <span *ngIf="registerForm.controls.firstname.errors.maxlength">Sorry you cannot exceed 20 characters</span>
+              </small>
+            </div>
+          </div>
+        </div>
+
+        <!-- Username -->
+        <div class="md-form mt-0">
+          <input [ngClass]="{ 'is-invalid': submitted && registerForm.controls.username.errors }"
+                 class="form-control" formControlName="username" id="username" type="text" mdbInput>
+          <label for="username">Username</label>
+          <!-- Validation -->
+          <small *ngIf="submitted && registerForm.controls.username.errors" class="form-text text-muted mb-4">
+            <span *ngIf="registerForm.controls.username.errors.required">Username is required</span>
+            <span *ngIf="registerForm.controls.username.errors.maxlength">Sorry you cannot exceed 30 characters</span>
+            <span *ngIf="registerForm.controls.username.errors['onlyLetters']">Only letters</span>
+            <span *ngIf="registerForm.controls.username.errors['noWhiteSpace']">White space is forbidden</span>
+          </small>
+        </div>
+
+        <!-- E-mail -->
+        <div class="md-form mt-0">
+          <input [ngClass]="{ 'is-invalid': submitted && registerForm.controls.email.errors }"
+                 class="form-control" formControlName="email" id="email" type="email" mdbInput>
+          <label for="email">E-mail</label>
+          <!-- Validation -->
+          <small *ngIf="submitted && registerForm.controls.email.errors" class="form-text text-muted mb-4">
+            <span *ngIf="registerForm.controls.email.errors.required">E-mail is required</span>
+            <span *ngIf="registerForm.controls.email.errors.maxlength">Sorry you cannot exceed 50 characters</span>
+            <span *ngIf="registerForm.controls.email.errors.email">Please provide a valid email address</span>
+          </small>
+        </div>
+
+        <!-- Password -->
+        <div class="md-form">
+          <input [ngClass]="{ 'is-invalid': submitted && registerForm.controls.password.errors }"
+                 class="form-control" formControlName="password" id="password" type="password" mdbInput>
+          <label for="password">Password</label>
+          <!-- Validation -->
+          <small *ngIf="submitted && registerForm.controls.email.errors" class="form-text text-muted mb-4">
+            <span *ngIf="registerForm.controls.password.errors.required">Password is required</span>
+          </small>
+        </div>
+
+        <!-- Confirm Password -->
+        <div class="md-form">
+          <input [ngClass]="{ 'is-invalid': submitted && registerForm.controls.confirmPassword.errors }"
+                 class="form-control" formControlName="confirmPassword" id="confirmPassword" type="password" mdbInput>
+          <label for="password">Confirm Password</label>
+          <!-- Validation -->
+          <small *ngIf="submitted && registerForm.controls.confirmPassword.errors" class="form-text text-muted mb-4">
+            <span *ngIf="registerForm.controls.confirmPassword.errors.required">Please confirm your password</span>
+            <span *ngIf="registerForm.controls.confirmPassword.errors.mustMatch">Both password don't match</span>
+          </small>
+        </div>
+
+        <!-- Sign up button -->
+        <button mdbBtn color="info" outline="true" rounded="true" class="my-4 waves-effect z-depth-0" mdbWavesEffect
+                type="submit">Sign in</button>
+      </form>
+      <!-- Form -->
+    </mdb-card-body>
+  </mdb-card>
+  <!-- Material form register -->
+</div>
+<app-footer></app-footer>

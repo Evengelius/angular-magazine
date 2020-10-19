@@ -1,0 +1,67 @@
+<!-- Section: form gradient -->
+<section class="form-gradient mb-5">
+
+  <!--Form with header-->
+  <mdb-card>
+
+    <!--Header-->
+    <div class="header peach-gradient">
+
+      <div class="row d-flex justify-content-center">
+        <h5 class="white-text mb-0 py-5 font-weight-bold">Leave a message</h5>
+      </div>
+
+    </div>
+    <!--Header-->
+
+    <mdb-card-body class="mx-4">
+
+      <!-- Form -->
+      <form (ngSubmit)="addComment()" [formGroup]="commentForm" style="color: #757575;">
+
+        <!-- Title -->
+        <div class="md-form">
+          <mdb-icon class="prefix grey-text" fas icon="pencil-alt"></mdb-icon>
+          <label for="title">Title</label>
+          <input [ngClass]="{ 'is-invalid': submitted && commentForm.controls.title.errors }" class="form-control"
+                 formControlName="title" id="title" mdbInput type="text">
+          <div *ngIf="submitted && commentForm.controls.title.errors" class="form-text text-danger mb-4">
+            <small *ngIf="commentForm.controls.title.errors.required">Title is required</small>
+            <small *ngIf="commentForm.controls.title.errors.minlength">At least 3 characters</small>
+            <small *ngIf="commentForm.controls.title.errors.maxlength">Cannot exceed 50 characters</small>
+          </div>
+        </div>
+
+        <!-- Message -->
+        <div class="md-form">
+          <mdb-icon class="prefix grey-text" fas icon="comment"></mdb-icon>
+          <label for="form107">Your message</label>
+          <textarea [ngClass]="{ 'is-invalid': submitted && commentForm.controls.message.errors }"
+                    class="md-textarea form-control"
+                    formControlName="message" id="form107" mdbInput rows="1"></textarea>
+          <div *ngIf="submitted && commentForm.controls.message.errors" class="form-text text-danger mb-4">
+            <small *ngIf="commentForm.controls.message.errors.required">Message is required</small>
+          </div>
+        </div>
+
+        <!-- Send -->
+        <div class="row d-flex align-items-center mb-3 mt-4">
+          <!--Grid column-->
+          <div class="col-md-12">
+            <div class="text-center">
+              <button class="my-4 waves-effect z-depth-0" color="warning"
+                      mdbBtn mdbWavesEffect outline="true" rounded="true" type="submit">
+                Send
+              </button>
+            </div>
+          </div>
+          <!--Grid column-->
+        </div>
+      </form>
+    </mdb-card-body>
+
+  </mdb-card>
+  <!--/Form with header-->
+
+</section>
+<!-- Section: form gradient -->

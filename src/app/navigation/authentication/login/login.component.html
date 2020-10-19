@@ -1,0 +1,53 @@
+<app-header></app-header>
+<div class="container">
+  <!-- Material form login -->
+  <mdb-card class="login">
+    <mdb-card-header class="blue-gradient white-text text-center py-4">
+      <h5>
+        <strong>Sign in</strong>
+      </h5>
+    </mdb-card-header>
+    <br /><br />
+    <!--Card content-->
+    <mdb-card-body class="px-lg-5 pt-0">
+
+      <!-- Form -->
+      <form (ngSubmit)="onSubmit()" [formGroup]="loginForm" class="text-center" style="color: #757575;">
+
+        <!-- Username -->
+        <div class="md-form mt-0">
+          <input [ngClass]="{ 'is-invalid': submitted && loginForm.controls.username.errors }"
+                 class="form-control" formControlName="username" id="username" type="text" mdbInput>
+          <label for="username">Username</label>
+          <!-- Validation -->
+          <small *ngIf="submitted && loginForm.controls.username.errors" class="form-text text-muted mb-4">
+            <span *ngIf="loginForm.controls.username.errors.required">Username is required</span>
+            <span *ngIf="loginForm.controls.username.errors.maxlength">Sorry you cannot exceed 30 characters</span>
+            <span *ngIf="loginForm.controls.username.errors['onlyLetters']">Only letters</span>
+            <span *ngIf="loginForm.controls.username.errors['noWhiteSpace']">White space is forbidden</span>
+          </small>
+        </div>
+
+        <!-- Password -->
+        <div class="md-form">
+          <input [ngClass]="{ 'is-invalid': submitted && loginForm.controls.password.errors }"
+                 class="form-control" formControlName="password" id="password" type="password" mdbInput>
+          <label for="password">Password</label>
+          <!-- Validation -->
+          <small *ngIf="submitted && loginForm.controls.password.errors" class="form-text text-muted mb-4">
+            <span *ngIf="loginForm.controls.password.errors.required">Password is required</span>
+          </small>
+        </div>
+
+        <!-- Sign in button -->
+        <button class="my-4 waves-effect z-depth-0" color="info" [outline]="true" mdbBtn mdbWavesEffect
+                rounded="true"
+                type="submit">Sign in
+        </button>
+      </form>
+      <!-- Form -->
+    </mdb-card-body>
+  </mdb-card>
+  <!-- Material form login -->
+</div>
+<app-footer></app-footer>

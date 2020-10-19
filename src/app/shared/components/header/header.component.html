@@ -1,0 +1,51 @@
+<!-- Navigation --->
+<header>
+  <!--Navbar -->
+  <nav class="mb-1 navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar stylish-color-dark">
+    <a [routerLink]="['/home']" class="navbar-brand">Ng Magazine</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4"
+            aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a [routerLink]="['/home']" routerLinkActive="active" class="nav-link">
+            <i class="fas fa-home"></i> Home</a>
+        </li>
+        <li class="nav-item">
+          <a [routerLink]="['/news']" routerLinkActive="active" class="nav-link">
+            <i class="far fa-newspaper"></i> News</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-4" data-toggle="dropdown"
+             aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-user"></i> Account</a>
+          <div class="dropdown-menu dropdown-menu-right dropdown-dark" aria-labelledby="navbarDropdownMenuLink-4">
+            <!-- /.Not Authenticate -->
+            <div *ngIf="!authenticationStorageService.isAuthenticated()">
+              <a class="dropdown-item" [routerLink]="['/register']" routerLinkActive="active">Register</a>
+              <a class="dropdown-item" [routerLink]="['/login']" routerLinkActive="active">Log in</a>
+            </div>
+
+            <!-- /.Authenticate -->
+            <div *ngIf="authenticationStorageService.isAuthenticated()">
+              <!-- /.Authenticate && Admin -->
+              <div *ngIf="authenticationStorageService.isAdmin()">
+                <a class="dropdown-item" [routerLink]="['/dashboard']" routerLinkActive="active">Dashboard</a>
+              </div>
+              <!-- Authenticate && Admin./ -->
+              <a class="dropdown-item" [routerLink]="['/profile']" routerLinkActive="active">Profile</a>
+              <a class="dropdown-item" (click)="logout()">Log out</a>
+            </div>
+            <!-- Authenticate./ -->
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!--/.Navbar -->
+
+  <!-- Navbar --->
+</header>
+<!-- Navigation --->

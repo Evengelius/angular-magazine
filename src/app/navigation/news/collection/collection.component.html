@@ -1,0 +1,35 @@
+<div *animIf="show; info: { startAnim: 'fadeIn', endAnim: 'fadeOut', time: 1500 }">
+  <div class="fixed-sn" style="background-color:#f3f3f3;">
+  <!-- Carousel Wrapper -->
+  <app-carousel-news></app-carousel-news>
+  <!-- Carousel Wrapper -->
+
+  <!-- Main layout -->
+  <main>
+    <div class="container-fluid">
+      <!-- Magazine -->
+      <div class="row mt-5">
+
+        <!-- Main newsfeed -->
+        <div class="col-xl-8 col-lg-8 col-md-12">
+
+          <!-- Section: News -->
+          <br>
+            <router-outlet></router-outlet>
+          <!-- Section: News -->
+        </div>
+        <!-- Main newsfeed -->
+
+        <!-- Sidebar -->
+        <div class="col-xl-4 col-lg-4 col-md-12 mt-0" id="articles">
+          <!-- Section: Categories -->
+          <app-sidebar [collections]="collections" (selected)="onSelectedCollection($event)"></app-sidebar>
+        </div>
+        <!-- Sidebar -->
+      </div>
+      <!-- Magazine -->
+    </div>
+  </main>
+  <!-- Main layout -->
+</div>
+</div>

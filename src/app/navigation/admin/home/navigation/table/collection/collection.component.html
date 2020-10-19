@@ -1,0 +1,35 @@
+<div class="card">
+  <h3 class="card-header text-center font-weight-bold text-uppercase py-4">Collection | All</h3>
+  <div class="card-body">
+    <div class="table-editable" id="table">
+      <span class="md-form float-left">
+        <input [(ngModel)]="listFilter" class="form-control" id="form1" mdbInput name="text" type="text">
+        <label class="" for="form1">Filtering by name</label>
+      </span>
+      <table *ngIf="collections && collections.length; else elseBlock"
+             class="table table-bordered table-responsive-md table-striped text-center">
+        <tr>
+          <th class="text-center">Name</th>
+        </tr>
+        <tr
+          *ngFor="let collection of filteredCollection | paginate: {id: 'collection_data', itemsPerPage: 2, currentPage: currentPage, totalItems: totalRecords}; let i = index;">
+          <td>{{collection.name}}</td>
+        </tr>
+        <tr *ngIf="!filteredCollection.length && listFilter.length">
+          <td colspan="10">No data found</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <ng-template #elseBlock>
+    <div class="flex-center">
+      <span class="font-weight-bold text-uppercase py-4" style="position: relative; top: 45px; right: 80px;">No more data</span>
+    </div>
+  </ng-template>
+  <nav aria-label="Page navigation example" class="flex-center">
+    <div>
+      <pagination-controls (pageChange)="currentPage = $event" class="pagination pg-blue" directionLinks="true" id="collection_data"
+                           maxSize="5"></pagination-controls>
+    </div>
+  </nav>
+</div>

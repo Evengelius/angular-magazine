@@ -1,0 +1,26 @@
+<section>
+    <h5 #pRef class="font-weight-bold">
+      <strong>NEWSFEED</strong>
+    </h5>
+    <hr class="red title-hr">
+    <!-- Grid row -->
+    <div class="row" #fadeInAnimation>
+      <!-- Grid column -->
+      <div class="col-md-12 mb-4">
+        <!-- News card | Begin -->
+        <app-newsfeed-article *ngFor="let article of articles | paginate:{id: 'articles_data', itemsPerPage: 2, currentPage: currentPage, totalItems: totalRecords}" [article]="article"></app-newsfeed-article>
+        <!-- News card | End -->
+      </div>
+      <!-- Grid column -->
+    </div>
+    <!-- Grid row -->
+
+  <!-- Pagination | Begin -->
+  <nav aria-label="navigation" class="flex-center">
+    <div>
+      <pagination-controls id="articles_data" class="pagination pg-blue" maxSize="5" directionLinks="true"
+                           (pageChange)="currentPage = $event"></pagination-controls>
+    </div>
+  </nav>
+  <!-- Pagination | End -->
+  </section>

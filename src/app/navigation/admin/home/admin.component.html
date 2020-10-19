@@ -1,0 +1,6 @@
+<app-navigation-admin></app-navigation-admin>
+<main [@fadeAnimation]="o.isActivated ? o.activatedRoute : ''" class="mx-lg-5">
+  <div class="mt-5">
+    <router-outlet #o="outlet"></router-outlet>
+  </div>
+</main>

@@ -1,0 +1,81 @@
+<!-- Default form register -->
+<div class="container">
+  <form (ngSubmit)="submit()" [formGroup]="registerForm" class="text-center border border-light p-5">
+
+    <p class="h4 mb-4">User | Create</p>
+
+
+    <div class="form-row mb-4">
+      <div class="col">
+        <!-- Last name -->
+        <input [ngClass]="{ 'is-invalid': submitted && registerForm.controls.name.errors }"
+               class="form-control" formControlName="name" id="name" placeholder="Last name"
+               type="text" />
+        <div *ngIf="submitted && registerForm.controls.name.errors" class="text-danger">
+          <div *ngIf="registerForm.controls.name.errors.required">Name is required</div>
+          <div *ngIf="registerForm.controls.name.errors.maxlength">Sorry you cannot exceed 20 characters</div>
+        </div>
+      </div>
+      <div class="col">
+        <!-- First name -->
+        <input [ngClass]="{ 'is-invalid': submitted && registerForm.controls.firstname.errors }"
+               class="form-control" formControlName="firstname" id="firstname"
+               placeholder="First name" type="text" />
+        <div *ngIf="submitted && registerForm.controls.firstname.errors" class="text-danger">
+          <div *ngIf="registerForm.controls.firstname.errors.required">Firstname is required</div>
+          <div *ngIf="registerForm.controls.firstname.errors.maxlength">Sorry you cannot exceed 20 characters</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Username -->
+    <div class="form-row mb-4">
+      <input [ngClass]="{ 'is-invalid': submitted && registerForm.controls.username.errors }"
+             class="form-control" formControlName="username" id="username"
+             placeholder="Username" type="text" />
+      <div *ngIf="submitted && registerForm.controls.username.errors" class="text-danger">
+        <div *ngIf="registerForm.controls.username.errors.required">Username is required</div>
+        <div *ngIf="registerForm.controls.username.errors.maxlength">Sorry you cannot exceed 30 characters</div>
+        <div *ngIf="registerForm.controls.username.errors['onlyLetters']">Only letters</div>
+        <div *ngIf="registerForm.controls.username.errors['noWhiteSpace']">White space is forbidden</div>
+      </div>
+    </div>
+
+    <!-- Email -->
+    <div class="form-row mb-4">
+      <input [ngClass]="{ 'is-invalid': submitted && registerForm.controls.email.errors }" class="form-control"
+             formControlName="email" id="email" placeholder="E-mail"
+             type="email" />
+      <div *ngIf="submitted && registerForm.controls.email.errors" class="text-danger">
+        <div *ngIf="registerForm.controls.email.errors.required">E-mail is required</div>
+        <div *ngIf="registerForm.controls.email.errors.maxlength">Sorry you cannot exceed 50 characters</div>
+        <div *ngIf="registerForm.controls.email.errors.email">Please provide a valid email address</div>
+      </div>
+    </div>
+
+    <!-- Password -->
+    <div class="form-row mb-4">
+      <input [ngClass]="{ 'is-invalid': submitted && registerForm.controls.password.errors }" class="form-control"
+             formControlName="password" id="password"
+             placeholder="Password" type="password" />
+      <div *ngIf="submitted && registerForm.controls.password.errors" class="text-danger">
+        <div *ngIf="registerForm.controls.password.errors.required">Password is required</div>
+      </div>
+    </div>
+
+    <!-- Confirm Password -->
+    <div class="form-row mb-4">
+      <input [ngClass]="{ 'is-invalid': submitted && registerForm.controls.password.errors }" class="form-control"
+             formControlName="confirmPassword" id="confirmPassword"
+             placeholder="Confirm Password" type="password" />
+      <div *ngIf="submitted && registerForm.controls.confirmPassword.errors" class="text-danger">
+        <div *ngIf="registerForm.controls.confirmPassword.errors.required">Please confirm your password</div>
+        <div *ngIf="registerForm.controls.confirmPassword.errors.mustMatch">Both password don't match</div>
+      </div>
+    </div>
+
+    <!-- Sign up button -->
+    <button class="my-4" color="info" mdbBtn type="submit">Submit</button>
+  </form>
+</div>
+<!-- Default form register -->

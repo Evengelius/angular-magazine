@@ -1,0 +1,47 @@
+<!-- Default form Update -->
+<div class="container">
+    <form (ngSubmit)="update(userForm.value)" [formGroup]="userForm" class="text-center border border-light p-5">
+
+        <p class="h4 mb-4">User | Edit</p>
+
+        <!-- Name -->
+        <div class="form-row mb-4">
+            <input class="form-control" formControlName="name" id="name" placeholder="Name" type="text"/>
+        </div>
+
+        <!-- Firstname -->
+        <div class="form-row mb-4">
+            <input class="form-control" formControlName="firstname" id="firstname" placeholder="Firstname" type="text"/>
+        </div>
+
+        <!-- Username -->
+        <div class="form-row mb-4">
+            <input class="form-control" formControlName="username" id="username" placeholder="Username" type="text"/>
+        </div>
+
+        <!-- Email -->
+        <div class="form-row mb-4">
+            <input class="form-control" formControlName="email" id="email" placeholder="E-mail" type="email"/>
+        </div>
+
+      <!-- Email -->
+      <div class="form-row mb-4">
+        <input class="form-control" formControlName="role" id="role" placeholder="Role" type="text"/>
+      </div>
+
+        <!-- Password -->
+        <div class="form-row mb-4">
+            <input class="form-control" formControlName="password" id="password" placeholder="Password" type="password"/>
+        </div>
+
+        <!-- Confirm Password -->
+        <div class="form-row mb-4">
+            <input class="form-control" formControlName="confirmPassword" id="confirmPassword" placeholder="Confirm Password" type="password"/>
+        </div>
+
+        <!-- Update button -->
+        <button [disabled]="userForm.invalid" class="my-4" color="info" mdbBtn type="submit">Submit</button>
+    </form>
+</div>
+<!-- Default form Update -->
+

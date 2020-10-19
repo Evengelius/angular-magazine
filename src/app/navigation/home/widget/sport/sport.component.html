@@ -1,0 +1,31 @@
+<section>
+  <div class="card hoverable">
+    <!-- Sport | Image | BEGIN --->
+    <div class="view overlay">
+      <img [src]="'assets/images/articles/'+article.images[0].name"
+           alt="Sample image" class="card-img-top">
+      <a>
+        <div class="mask rgba-white-slight"></div>
+      </a>
+    </div>
+    <!-- Sport | Image | END --->
+
+    <!-- Sport | Content | BEGIN --->
+    <div class="card-body">
+      <!-- Title --->
+      <h4 class="card-title"><strong>{{ (article.title.length>20)? (article.title | slice:0:20)+'(...)':(article.title) }}</strong></h4>
+      <hr>
+      <!-- Description --->
+      <p class="card-text mb-3">{{ (article.description.length>200)? (article.description | slice:0:200)+'(...)':(article.description) }}</p>
+      <!-- Date --->
+      <p class="font-small font-weight-bold dark-grey-text mb-1"><i class="far fa-clock-o"></i>27/08/2017</p>
+      <!-- Author | Firstname & Lastname --->
+      <p class="font-small grey-text mb-0">{{ article.author }}</p>
+      <!-- Read More --->
+      <p class="text-right mb-0 font-small font-weight-bold">
+        <a [routerLink]="'/news/article/'+article.id" >read more <i class="fas fa-angle-right"></i></a>
+      </p>
+    </div>
+    <!-- Sport | Content | END --->
+  </div>
+</section>

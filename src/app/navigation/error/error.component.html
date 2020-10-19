@@ -1,0 +1,26 @@
+<div class="lamp-container" *animIf="show; info: { startAnim: 'fadeIn', endAnim: 'fadeOut', time: 2000 }">
+  <!-- Lamp -->
+  <div class="lamp__wrap">
+    <div class="lamp">
+      <div class="cable"></div>
+      <div class="cover"></div>
+      <div class="in-cover">
+        <div class="bulb"></div>
+      </div>
+      <div class="light"></div>
+    </div>
+  </div>
+  <!-- END Lamp -->
+
+  <!-- Error | Content -->
+  <section class="error">
+    <div class="error__content">
+      <div class="error__message message">
+        <h1 class="message__title">Page Not Found</h1>
+      </div>
+      <div class="error__nav e-nav">
+        <a [routerLink]="['/home']" routerLinkActive="active" class="e-nav__link"></a>
+      </div>
+    </div>
+  </section>
+</div>

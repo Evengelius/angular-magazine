@@ -1,0 +1,153 @@
+<app-header></app-header>
+<div *animIf="show; info: { startAnim: 'fadeIn', endAnim: 'fadeOut', time: 1500 }">
+  <div *ngIf="articles.length" class="fixed-sn" style="background-color:#202027;">
+    <!-- Main layout --->
+    <main>
+      <div class="container-fluid">
+        <!-- Magazine --->
+        <div class="row mt-2">
+          <!-- Main category --->
+          <div class="col-sm-12">
+
+            <!-- Section: Magazine posts --->
+            <section class="section extra-margins mt-2">
+              <!-- Carousel Wrapper --->
+              <app-carousel-home></app-carousel-home>
+
+              <!-- -------------------- -->
+
+              <!-- SECTION | POLITIC --->
+              <!-- Title -->
+              <h4 class="font-weight-bold mt-5 white-text"><strong>POLITICS</strong></h4>
+              <hr class="red title-hr">
+              <!-- Politic | Content | BEGIN -->
+              <div class="row mt-4">
+                <!-- Politic | Loop -->
+                <div *ngFor="let article of articles | slice: 0: 4" class="col-md-6">
+                  <!-- Politic | Child Component -->
+                  <app-politic [article]="article"></app-politic>
+                  <!-- Politic | Child Component -->
+                </div>
+                <!-- Politic | Loop  --->
+              </div>
+              <!-- Politic | Content | END -->
+
+              <!-- -------------------- -->
+
+              <!-- SECTION | SPORT --->
+              <!-- Title -->
+              <h4 class="font-weight-bold mt-5 white-text"><strong>SPORT</strong></h4>
+              <hr class="red title-hr">
+              <!-- Carousel Wrapper --->
+              <div class="carousel slide carousel-fade my-4 z-depth-1" data-ride="carousel" id="carousel-example-3">
+
+                <!-- Indicators --->
+                <ol class="carousel-indicators">
+                  <li class="active" data-slide-to="0" data-target="#carousel-example-3"></li>
+                  <li data-slide-to="1" data-target="#carousel-example-3"></li>
+                  <li data-slide-to="2" data-target="#carousel-example-3"></li>
+                </ol>
+                <!-- Indicators --->
+
+                <!-- Slides --->
+                <div class="carousel-inner" role="listbox">
+                  <div class="carousel-item active">
+                    <div class="view">
+                      <img alt="First slide" class="d-block w-100"
+                           src="https://mdbootstrap.com/img/Photos/Slides/img%20(81).jpg">
+                      <div class="mask rgba-black-light"></div>
+                    </div>
+
+                    <div class="carousel-caption">
+                      <h3 class="h3-responsive font-weight-bold">Title of the news</h3>
+                      <p>First text</p>
+                    </div>
+                  </div>
+
+                  <div class="carousel-item">
+                    <!-- Mask color --->
+                    <div class="view">
+                      <img alt="Second slide" class="d-block w-100"
+                           src="https://mdbootstrap.com/img/Photos/Slides/img%20(80).jpg">
+                      <div class="mask rgba-black-light"></div>
+                    </div>
+
+                    <div class="carousel-caption">
+                      <h3 class="h3-responsive font-weight-bold">Title of the news</h3>
+                      <p>Secondary text</p>
+                    </div>
+                  </div>
+
+                  <div class="carousel-item">
+                    <!-- Mask color --->
+                    <div class="view">
+                      <img alt="Third slide" class="d-block w-100"
+                           src="https://mdbootstrap.com/img/Photos/Slides/img%20(39).jpg">
+                      <div class="mask rgba-black-light"></div>
+                    </div>
+
+                    <div class="carousel-caption">
+                      <h3 class="h3-responsive font-weight-bold">Title of the news</h3>
+                      <p>Third text</p>
+                    </div>
+                  </div>
+
+                </div>
+                <!-- Slides --->
+
+                <!-- Controls --->
+                <a class="carousel-control-prev" data-slide="prev" href="#carousel-example-3" role="button">
+                  <span aria-hidden="true" class="carousel-control-prev-icon"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+
+                <a class="carousel-control-next" data-slide="next" href="#carousel-example-3" role="button">
+                  <span aria-hidden="true" class="carousel-control-next-icon"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+                <!-- Controls --->
+
+              </div>
+              <!-- Carousel Wrapper --->
+
+              <!-- Sport | Content | BEGIN -->
+              <div class="row mb-4">
+                <!-- Sport | Loop  --->
+                <div *ngFor="let article of articles | slice: 4: 7" class="col-md-4 my-3">
+                  <!-- Sport | Child Component -->
+                  <app-sport [article]="article"></app-sport>
+                  <!-- Sport | Child Component -->
+                </div>
+                <!-- Sport | Loop  --->
+              </div>
+              <!-- Sport | Content | END -->
+
+              <!-- -------------------- -->
+
+              <!-- SECTION | HEALTH --->
+              <!-- Title -->
+              <h4 class="font-weight-bold mt-5 white-text"><strong>HEALTH</strong></h4>
+              <hr class="red title-hr">
+              <!-- Health | Content | BEGIN -->
+              <div class="row single-post mb-4">
+                <!-- Health | Loop -->
+                <div *ngFor="let article of articles | slice: 7: 9" class="col-md-6 text-left mt-3">
+                  <!-- Health | Child Component -->
+                  <app-health [article]="article"></app-health>
+                  <!-- Health | Child Component -->
+                </div>
+                <!-- Health | Loop -->
+              </div>
+              <!-- Health | Content | END -->
+            </section>
+            <!-- Section: Magazine posts --->
+          </div>
+          <!-- Main category --->
+        </div>
+        <!-- Magazine --->
+      </div>
+    </main>
+    <!-- Main layout --->
+  </div>
+</div>
+<app-footer></app-footer>

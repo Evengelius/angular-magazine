@@ -1,0 +1,64 @@
+<div class="card">
+  <h3 class="card-header text-center font-weight-bold text-uppercase py-4">Users | All</h3>
+  <div class="card-body">
+    <div class="table-editable" id="table">
+      <span class="md-form float-left">
+        <input [(ngModel)]="listFilter" class="form-control" id="form1" mdbInput name="text" type="text">
+        <label class="" for="form1">Filtering by name</label>
+      </span>
+      <span class="table-add float-right mb-3 mr-2">
+        <a class="text-success" routerLink="create">
+          <mdb-icon fas icon="plus"></mdb-icon>
+        </a>
+      </span>
+      <table *ngIf="users && users.length; else elseBlock"
+             class="table table-bordered table-responsive-md table-striped text-center">
+        <tr>
+          <th class="text-center">Lastname</th>
+          <th class="text-center">Firstname</th>
+          <th class="text-center">Username</th>
+          <th class="text-center">Email</th>
+          <th class="text-center">Role</th>
+          <th class="text-center">View</th>
+          <th class="text-center">Edit</th>
+        </tr>
+        <tr
+          *ngFor="let user of filteredUser | paginate: {id: 'users_data', itemsPerPage: 2, currentPage: currentPage, totalItems: totalRecords}; let i = index;">
+          <td>{{user.name}}</td>
+          <td>{{user.firstname}}</td>
+          <td>{{user.username}}</td>
+          <td>{{user.email}}</td>
+          <td>{{user.role}}</td>
+          <td>
+                        <span class="table-up">
+                            <a [routerLink]="['show', user.id]" class="text-primary">
+                                <mdb-icon fas icon="eye"></mdb-icon>
+                            </a>
+                        </span>
+          </td>
+          <td>
+                        <span class="table-up">
+                            <a [routerLink]="['edit', user.id]" class="indigo-text">
+                                <mdb-icon fas icon="edit"></mdb-icon>
+                            </a>
+                        </span>
+          </td>
+        </tr>
+        <tr *ngIf="!filteredUser.length && listFilter.length">
+          <td colspan="10">No data found</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <ng-template #elseBlock>
+    <div class="flex-center">
+      <span class="font-weight-bold text-uppercase py-4" style="position: relative; top: 45px; right: 80px;">No more data</span>
+    </div>
+  </ng-template>
+  <nav aria-label="Page navigation example" class="flex-center">
+    <div>
+      <pagination-controls (pageChange)="currentPage = $event" class="pagination pg-blue" directionLinks="true" id="users_data"
+                           maxSize="5"></pagination-controls>
+    </div>
+  </nav>
+</div>

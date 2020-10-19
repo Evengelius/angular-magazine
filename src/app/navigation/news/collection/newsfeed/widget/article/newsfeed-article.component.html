@@ -1,0 +1,36 @@
+<div class="card  mb-3 text-center ">
+    <div class="card-body hoverable">
+      <!-- Grid row -->
+      <div class="row">
+        <!-- Grid column -->
+        <div class="col-md-5 mx-3 my-3">
+          <!-- Featured image -->
+          <div class="view overlay rgba-white-slight">
+            <img [alt]="article.title"
+                 class="img-fluid rounded-bottom"
+                 [src]="'assets/images/articles/'+article.images[0].name">
+            <a>
+              <div class="mask"></div>
+            </a>
+          </div>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-6 text-left ml-xl-3 ml-lg-0 ml-md-3 mt-3">
+          <h4 class="mb-4">
+            <strong>{{ (article.title.length>30)? (article.title | slice:0:30)+'(...)':(article.title) }}</strong>
+          </h4>
+
+          <p class="dark-grey-text">{{ (article.description.length>200)? (article.description | slice:0:200)+'(...)':(article.description) }}</p>
+          <p>by
+            <a>
+              <strong>{{article.author}}</strong>
+            </a>, 19/08/2016</p>
+          <a [routerLink]="'/news/article/'+article.id" class="btn btn-success btn-sm">Read more</a>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </div>

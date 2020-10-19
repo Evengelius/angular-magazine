@@ -1,0 +1,37 @@
+<div class="card">
+  <h3 class="card-header text-center font-weight-bold text-uppercase py-4">Comment | All</h3>
+  <div class="card-body">
+    <div class="table-editable" id="table">
+      <span class="md-form float-left">
+        <input [(ngModel)]="listFilter" class="form-control" id="form1" mdbInput name="text" type="text">
+        <label class="" for="form1">Filtering by title</label>
+      </span>
+      <table *ngIf="comments && comments.length; else elseBlock"
+             class="table table-bordered table-responsive-md table-striped text-center">
+        <tr>
+          <th class="text-center">Title</th>
+          <th class="text-center">Message</th>
+        </tr>
+        <tr
+          *ngFor="let collection of filteredComment | paginate: {id: 'comment_data', itemsPerPage: 2, currentPage: currentPage, totalItems: totalRecords}; let i = index;">
+          <td>{{collection.title}}</td>
+          <td>{{collection.message}}</td>
+        </tr>
+        <tr *ngIf="!filteredComment.length && listFilter.length">
+          <td colspan="10">No data found</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <ng-template #elseBlock>
+    <div class="flex-center">
+      <span class="font-weight-bold text-uppercase py-4" style="position: relative; top: 45px; right: 80px;">No more data</span>
+    </div>
+  </ng-template>
+  <nav aria-label="Page navigation example" class="flex-center">
+    <div>
+      <pagination-controls (pageChange)="currentPage = $event" class="pagination pg-blue" directionLinks="true" id="comment_data"
+                           maxSize="5"></pagination-controls>
+    </div>
+  </nav>
+</div>

@@ -1,0 +1,33 @@
+<div class="row" *ngIf='user'>
+  <div class="d-block mx-auto">
+    <!--Card-->
+    <mdb-card cascade="true" wider="true">
+      <!--Card image-->
+      <div class="view view-cascade overlay waves-light" mdbWavesEffect>
+        <mdb-card-img class="img-fluid" src="assets/images/admin/profile.jpg"></mdb-card-img>
+        <a>
+          <div class="mask rgba-white-slight"></div>
+        </a>
+      </div>
+      <!--/Card image-->
+
+      <mdb-card-body cascade="true" class="text-center">
+        <!--Card content-->
+        <!--Title-->
+        <h4 class="card-title">
+          <strong>{{user.firstname | titlecase}} {{user.name | titlecase}}</strong>
+        </h4>
+        <h5 class="indigo-text">
+          <strong>{{user.role | titlecase}} member</strong>
+        </h5>
+
+        <mdb-card-text>Username : {{user.username}}</mdb-card-text>
+        <mdb-card-text>E-mail : {{user.email}}</mdb-card-text>
+
+        <a class="waves-light col-md-4" color="unique" mdbBtn mdbWavesEffect (click)='delete()'>Delete</a>
+      </mdb-card-body>
+      <!--/.Card content-->
+    </mdb-card>
+    <!--/.Card-->
+  </div>
+</div>
