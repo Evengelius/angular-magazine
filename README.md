@@ -31,7 +31,7 @@ Angular takes care of everything on the client side.
 Processing HTTP requests made with SpringBoot.
 
 **Authentication and Validation management**<br />
-Angular Interceptor & JSON Web Token | Angular Validation.
+Angular Interceptor & JSON Web Token : public key & secret key | Angular Validation.
 
 **Animation management**<br />
 Angular Animation : animations made on each page change.
