@@ -10,7 +10,7 @@ import { ErrorHandlerService } from './miscellaneous/error-handler.service';
 })
 export class CommentService extends ErrorHandlerService {
 
-  private baseUrl = 'http://localhost:8070/api/comments';
+  private baseUrl = 'http://localhost:8070/api';
 
   httpOptions = {
     headers: new HttpHeaders({'Content-Type': 'application/json'})
@@ -21,12 +21,12 @@ export class CommentService extends ErrorHandlerService {
   }
 
   findAll(): Observable<Comment[]> {
-    return this.http.get<Comment[]>(this.baseUrl).pipe(
+    return this.http.get<Comment[]>(`${this.baseUrl}/comments`).pipe(
       catchError(this.handleError)
     );
   }
 
   store(id: number, comment: any): Observable<Comment> {
-    return this.http.post<Comment>(`${this.baseUrl}/${id}/comments`, comment, this.httpOptions);
+    return this.http.post<Comment>(`${this.baseUrl}/articles/${id}/comments`, comment, this.httpOptions);
   }
 }
