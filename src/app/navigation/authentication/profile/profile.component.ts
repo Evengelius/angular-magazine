@@ -17,7 +17,6 @@ export class ProfileComponent implements OnInit {
 
   public currentUser(): any {
     this.user = {
-      token: sessionStorage.getItem('token'),
       name: sessionStorage.getItem('name'),
       firstname: sessionStorage.getItem('firstname'),
       username: sessionStorage.getItem('username'),

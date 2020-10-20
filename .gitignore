@@ -1,1 +1,9 @@
 node_modules
+/.idea/.gitignore
+/.idea/angular-magazine.iml
+/.idea/codeStyles/codeStyleConfig.xml
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/codeStyles/Project.xml
+/.idea/inspectionProfiles/Project_Default.xml
+/.idea/vcs.xml
