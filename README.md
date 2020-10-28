@@ -49,8 +49,7 @@ Error component : display an error page in case of invalid url(s).
 **Application**
 
 ![Application | 01](https://zupimages.net/up/20/43/rxqr.png)
-
-![Application | 02](https://ibb.co/dKKLnrx)
+![Application | 02](https://www.zupimages.net/up/20/43/zhpa.png)
 
 **Authentication | Login**
 
